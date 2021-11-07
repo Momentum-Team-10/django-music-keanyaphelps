@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+#looking in music directory for views.py to import all views from that file 
+from music.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+#at the root path run the view called list_albums
+    path("", list_albums, name='list_albums')
 ] 
 #review amy's URL committ.  add url's in two places in the From/import and then in the URL patterns
